@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MikuHost Api documentation</title>
+
+  <!-- Open Graph Meta Tags for WhatsApp Sharing -->
+  <meta name="google-site-verification" content="qr3K9_O38DP-PWHhNavydV-fkLIMPaUJxQe3t>
+<meta property="og:title" content="MikuHostu API - Layanan API Gratis dan Premium 🔥" >
+<meta property="og:description" content="Menyediakan berbagai layanan API dari yang gr>
+<meta property="og:image" content="https://files.catbox.moe/if7ieb.jpg" />
+<meta property="og:url" content="https://mikuhost.web.id" />
+<meta property="og:type" content="website" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="index/style.css">
+</head>
+<body>
+
+
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">
+            <img src="https://ryuu-endss.verceapp/src/icon.png" alt="Logo">
+            <span>MikuHost Api</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Profil</a></li>
+            <li><a href="#">Galeri</a></li>
+            <li><a href="#">Partner</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+        <button id="theme-toggle">🌙 Dark Mode</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>VERY USEFUL REST API DOCUMENTATION FOR SOME BOT DEVELOPERS</h1>
+            <p>Dokumentasi REST API yang sangat berguna untuk beberapa developer bot WhatsApp.</p>
+        </div>
+        <div class="hero-nav">
+            <button aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+            <button aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+<div class="container">
+<section class="headmaster-section">
+<div class="headmaster-card">
+    <img src="https://files.catbox.moe/y3xsjj.jpg" alt="Owner">
+    <h2>Creator Website</h2>
+    <h3>MikuHost</h3>
+    <p>Creator of website "MikuHost Api'S" with some useful features </p>
+    <a href="/api" class="read-more-button">Explore Api <i class="fas fa-chevron-right"></i></a>
+</div>
+<div class="statistics">
+    <h2>Statistik Data Endpoint</h2>
+    <ul>
+        <li><span id="stat-ip">Loading...</span><h3>IP Pengunjung</h3></li>
+        <li><span id="stat-rps">Loading...</span><h3>Total Request/s</h3></li>
+        <li><span id="stat-fitur">Loading...</span><h3>Total Endpoint</h3></li>
+    </ul>
+</div>
+</section>
+
+
+    <section class="non-teaching-staff-section">
+        <div class="section-header">
+            <h2>My Waifu</h2>
+            <a href="#" aria-label="Miku-Nakano"><i class="fas fa-chevron-right"></i></a>
+        </div>
+        <p>Lihat semua waifu kesayangan ku :v</p>
+        <div class="staff-cards">
+            <div class="staff-card">
+                <img src="https://files.catbox.moe/if7ieb.jpg" alt="Foto 1">
+                <h3>Miku-Nakano</h3>
+                <small>Karakter anime yang di anggap malaikat di anime nya karena parasnya yang cantik dan sifatnya yang introvert</small>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial-section">
+        <div class="section-header">
+            <h2>About Me:</h2>
+        </div>
+        <div class="testimonial-card">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p>Im Beginner MikuHost</p>
+            <div class="testimonial-author">
+                <img src="8.jpg" alt="Foto author">
+                <div>
+                    <h3>MikuHost</h3>
+                    <small>Creator website</small>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <div class="footer-columns">
+        <div class="footer-column">
+            <h3>MikuHost Dev Api</h3>
+            <li><a href="https://mikuhost.web.id">Base Url</a></li>
+            <div class="social-links">
+                <a href="https://wa.me/6285189063747" aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/miku208" aria-label="Github"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3>Me</h3>
+            <ul>
+                <li><a href="https://wa.me/6285189063747">Contact</a></li>
+                <li><a href="https://whatsapp.com/channel/0029Vb5xetZBadmS2IPdmG1X">Info</a></li>
+                <li><a href="https://github.com/miku208">Github</a></li>
+                <li><a href="https://trakteer.id/faldrian/git">Support me</a></li>
+                <li><a href="https://whatsapp.com/channel/0029Vb615brAzNbywHCyc1w">Updates</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <p>© 2026 MikuHost. Semua hak dilindungi.</p>
+    </div>
+</footer>
+
+<script>
+    // Theme toggle
+        const toggleBtn = document.getElementById('theme-toggle');
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            toggleBtn.innerText = document.body.classList.contains('dark') ? '☀️ Light Mode' : '🌙 Dark Mode';
+        });
+// Script untuk fetch stats dari server
+async function updateStats() {
+    try {
+        const res = await fetch('https://api.ryuu-dev.offc.my.id/stats'); // endpoint harus ada di server
+        const data = await res.json();
+        document.getElementById('stat-ip').innerText = data.ip || 'N/A';
+        document.getElementById('stat-rps').innerText = data.rps || 0;
+        document.getElementById('stat-fitur').innerText = data.fitur || 0;
+    } catch(e) {
+        console.error(e);
+        document.getElementById('stat-ip').innerText = 'Error';
+        document.getElementById('stat-rps').innerText = 'Error';
+        document.getElementById('stat-fitur').innerText = 'Error';
+    }
+}
+
+setInterval(updateStats, 1000);
+updateStats();
+// Toggle tema gelap/terang
+const toggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Cek localStorage
+if(localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+}
+
+toggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    if(body.classList.contains('dark-mode')){
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+});
+</script>
+</body>
+</html>
