@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+  {
+    "src": "/(src/api)/.*",
+    "status": 403,
+    "dest": "/api-page/403.html"
+  },
+  {
+    "src": "/(.*)",
+    "dest": "/index.js"
+  }
+],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
