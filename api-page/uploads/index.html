@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id" class="transition-colors duration-500">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MikuHost Uploader</title>
+
+  <!-- Tailwind + Axios -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="relative text-center py-6 shadow-md glass">
+    <div class="absolute top-4 right-4">
+      <button id="themeToggle" class="px-3 py-2 rounded-lg glass text-sm font-medium shadow">
+        🌞 / 🌙
+      </button>
+    </div>
+    <img src="https://mikuhost.web.id/src/mmk.jpg" alt="Apaan?🗿"
+         class="mx-auto w-24 h-24 rounded-full shadow-lg border-4 border-white dark:border-slate-700">
+    <h1 class="text-2xl font-bold mt-3 text-slate-800 dark:text-slate-100">MikuHost Cloud Uploads</h1>
+    <p class="text-slate-500 dark:text-slate-400">Free, Simple & Futuristic Uploader</p>
+  </header>
+
+  <!-- Main -->
+  <main class="flex-grow flex flex-col items-center justify-center p-6">
+    <div id="dropzone" class="dropzone glass w-full max-w-xl flex items-center justify-center p-6 cursor-pointer">
+      <div class="text-center">
+        <p class="text-lg font-medium">🚀 Click or drag files here</p>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Max 20 MB file.</p>
+      </div>
+    </div>
+
+    <input id="fileInput" type="file" class="hidden" />
+    <div id="filePreview" class="mt-4 font-medium"></div>
+
+    <div class="mt-6 flex gap-3">
+      <button id="uploadBtn" class="px-5 py-2 rounded-lg text-white neon-btn">Upload Sekarang</button>
+      <button id="clearBtn" class="px-4 py-2 rounded-lg glass border">Batal</button>
+    </div>
+
+    <div id="result" class="mt-5 w-full max-w-xl text-center"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-4 text-center text-sm glass mt-4">
+    © 2026 MikuHost. Semua hak dilindungi.
+  </footer>
+  <script src="uploader.js"></script>
+</body>
+</html>
