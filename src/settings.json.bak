@@ -1,0 +1,519 @@
+{
+  "name": "MikuHost-APIi UI",
+  "version": "v1.0.0",
+  "description": "Simple API Gratis.",
+  "bannerImage": "src/banner.jpg",
+  "header": {
+    "status": "Online!"
+  },
+  "apiSettings": {
+    "creator": "MikuHost",
+    "apikey": ["ApiGratis", "Hiruuu", "RyuuGanteng"]
+  },
+  "categories": [
+    {
+      "name": "AI (Artificial Intelligence)",
+      "icon": "fas fa-robot",
+      "items": [
+        {
+          "name": "Chatgpt Turbo 3.0",
+          "desc": "Talk Chatgpt",
+          "path": "/ai/gptturbo?text=",
+          "status": "ready"
+        },
+        {
+          "name": "Mahiru AI",
+          "desc": "Chat mahiru",
+          "path": "/ai/mahiru-ai?text=",
+          "status": "ready"
+        },        
+        {
+          "name": "Dopple AI",
+          "desc": "Talk with Dopple AI",
+          "path": "/ai/dopple?text=",
+          "status": "ready",
+          "params": {
+            "text": "Text for Dopple AI to respond to",
+            "apikey": "Your API key"
+          }
+        },
+        {
+          "name": "Felo AI",
+          "desc": "Talk with Felo AI",
+          "path": "/ai/felo?text=",
+          "status": "ready",
+          "params": {
+            "text": "Text for Felo AI to respond to"
+          }
+        },
+        {
+          "name": "Koyuki AI",
+          "desc": "Talk with Koyuki AI",
+          "path": "/ai/koyuki?text=",
+          "status": "ready",
+          "params": {
+            "text": "Text for Koyuki Iceflow to respond to"
+          }
+        },
+        {
+          "name": "Lumin AI",
+          "desc": "Talk with Lumin AI",
+          "path": "/ai/lumin?text=",
+          "status": "ready",
+          "params": {
+            "text": "Text for Lumin AI to respond to"
+          }
+        },
+        {
+          "name": "Venice AI",
+          "desc": "Talk with Venice AI",
+          "path": "/ai/veniceai?text=",
+          "status": "ready",
+          "params": {
+            "text": "Text for Venice AI to respond to"
+          }
+        },
+        {
+          "name": "Gpt 4.1",
+          "desc": "Talk with GPT-4.1. Bisa memahami gambar dan lanjutkan percakapan.",
+          "path": "/ai/gpt-4.1?text=&imageUrl=",
+          "method": "GET",
+          "status": "ready",
+          "params": {
+            "text": {
+              "required": true,
+              "type": "string",
+              "desc": "Teks yang ingin dikirim ke GPT-4.1"
+            },
+            "imageUrl": {
+              "required": false,
+              "type": "string",
+              "desc": "URL gambar opsional untuk dianalisis oleh GPT-4.1"
+            }
+          }
+        },
+        {
+           "name": "Voice Changer HololiveID",
+           "desc": "Ubah suara menjadi karakter Hololive Indonesia dengan RVC (Realtime Voice Changer).",
+           "path": "/ai/rvc?model=&linkAudio=&pitch=",
+           "method": "GET",
+           "status": "ready",
+           "params": {
+             "model": {
+               "required": true,
+               "type": "string",
+               "desc": "Nama model karakter HololiveID (contoh: moona, risu, ollie, zeta, dll)."
+             },
+             "linkAudio": {
+               "required": true,
+               "type": "string",
+               "desc": "Link URL file audio (.mp3) yang ingin diubah suaranya."
+             },
+             "pitch": {
+               "required": false,
+               "type": "number",
+               "desc": "Opsional. Atur pitch suara (positif lebih tinggi, negatif lebih rendah). Contoh: 2, -1, 0."
+             }
+          }
+        },
+        {
+          "name": "Voice Changer Blue Archive",
+          "desc": "Ubah suara kamu menjadi karakter cewek Blue Archive menggunakan teknologi RVC (Realtime Voice Conversion).",
+          "path": "/ai/rvc-ba?char=&audio_url=&pitch=",
+          "method": "GET",
+          "status": "ready",
+          "params": {
+            "char": {
+              "required": true,
+              "type": "string",
+              "desc": "Nama karakter Blue Archive. Contoh: arona, wakamo, hina, shiroko, dll."
+            },
+            "audio_url": {
+              "required": true,
+              "type": "string",
+              "desc": "Link URL file audio (.mp3) yang ingin diubah. Bisa dari Dropbox, Catbox, dll."
+            },
+            "pitch": {
+              "required": false,
+              "type": "boolean",
+              "desc": "Opsional."
+            }
+          }
+        },
+        {
+          "name": "Veo 3 Video",
+          "desc": "Buat video menggunakan ai dengan durasi kurang dari 10 detik",
+          "path": "/ai/veo3?prompt=",
+          "method": "GET",
+          "status": "ready",
+          "params": {
+            "prompt": {
+              "required": true,
+              "type": "string",
+              "desc": "Deskripsi video yang ingin dibuat (dalam bahasa Inggris)."
+            }
+          }
+        },
+        {
+          "name": "Open AI",
+          "desc": "Talk with Open AI",
+          "path": "/ai/openai?text=",
+          "status": "ready",
+          "params": {
+            "text": "Text for Venice AI to respond to"
+          }
+        },
+        {
+          "name": "Claude AI",
+          "desc": "Talk with Claude AI",
+          "path": "/ai/claude?text=",
+          "status": "ready",
+          "params": {
+            "text": "Text for Claude AI to respond to"
+          }
+        },
+        {
+          "name": "Blackbox AI",
+          "desc": "Talk with Blackbox AI. Bisa deteksi gambar & balas chat.",
+          "path": "/ai/blackbox?text=&imageUrl=&sessionid=",
+          "method": "GET",
+          "status": "ready",
+          "params": {
+            "text": {
+              "required": true,
+              "type": "string",
+              "desc": "Teks yang ingin dikirim ke Blackbox AI"
+            },
+            "imageUrl": {
+              "required": false,
+              "type": "string",
+              "desc": "URL gambar opsional untuk dianalisis oleh AI"
+            },
+            "sessionid": {
+              "required": false,
+              "type": "string",
+              "desc": "Session ID opsional untuk mempertahankan konteks"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Image Creator",
+      "icon": "fas fa-image",
+      "items": [
+        {
+          "name": "Remini",
+          "desc": "Tingkatkan kualitas foto buram",
+          "path": "/imagecreator/remini?apikey=&url=",
+          "status": "ready",
+          "params": {
+            "imageUrl": "URL gambar yang ingin ditingkatkan"
+          }
+        },
+        {
+          "name": "Flux Unlimited",
+          "desc": "Generate gambar AI (NSFW core)",
+          "path": "/imagecreator/flux-unli?prompt=",
+          "params": {
+            "prompt": "Teks deskripsi gambar yang ingin dibuat (wajib)"
+            }
+          },
+        {
+          "name": "Animage IMG",
+          "desc": "Generate gambar AI dengan gaya anime",
+          "path": "/imagecreator/animage?prompt=",
+          "params": {
+            "prompt": "Teks deskripsi gambar yang ingin dibuat (wajib)"
+            }
+          },
+        {
+          "name": "FluxLora Ai Image Generator",
+          "desc": "Generate gambar AI dengan gaya LoRA seperti icon, logo, sketsa, dll",
+          "path": "/imagecreator/flux-lora?prompt=",
+          "params": {
+            "prompt": "Teks deskripsi gambar yang ingin dibuat (wajib)"
+          }
+        },
+        {
+          "name": "ZonerAI Txt2Img",
+          "desc": "Buat gambar dari teks menggunakan AI",
+          "path": "/imagecreator/txt2img?prompt=&resolusi=&upscale=",
+          "params": {
+            "prompt": "Deskripsi gambar (required)",
+            "resolusi": "Resolusi (portrait, landscape, square, ultra, tall, wide)",
+            "upscale": "Upscale level (1-2)"
+          }
+        },
+        {
+          "name": "Imagen AI",
+          "desc": "Buat gambar dari teks menggunakan AI",
+          "path": "/imagecreator/imagen?prompt=&style=&Nstyle=&size=",
+          "params": {
+            "prompt": "Deskripsi gambar (required)",
+            "style": "style: anime, cartoon, dll",
+            "Nstyle": "style: anime, cartoon, dll",
+            "size": "1:1, 3:4, 4:3, 9:16, 16:9"
+          }
+        },
+        {
+          "name": "Image Upscaler 4K",
+          "desc": "Upscale gambar jadi 4K kualitas tinggi",
+          "path": "/imagecreator/upscaler4k?url=",
+          "params": {
+            "url": "Link gambar PNG/JPG yang ingin ditingkatkan resolusinya"
+          }
+        },
+        {
+          "name": "Writecream Image",
+          "desc": "Generate gambar AI berdasarkan prompt dan rasio dengan API Writecream.",
+          "path": "/imagecreator/writecream?prompt=&ratio=",
+          "method": "GET",
+          "status": "ready",
+          "params": {
+            "prompt": {
+              "required": true,
+              "type": "string",
+              "desc": "Teks deskripsi gambar yang ingin dibuat (misal: 'anime girl with glasses')."
+            },
+            "ratio": {
+              "required": true,
+              "type": "string",
+              "desc": "Rasio gambar yang diinginkan. Pilihan: 1:1, 16:9, 2:3, 3:2, 4:5, 5:4, 9:16, 21:9, 9:21"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Random",
+      "icon": "fas fa-random",
+      "items": [
+        {
+          "name": "Blue Archive",
+          "desc": "Blue Archive Random Images",
+          "path": "/random/ba",
+          "status": "ready"
+        },
+        {
+          "name": "Randow Waifu",
+          "desc": "Random Waifu Images",
+          "path": "/random/waifupic",
+          "status": "ready"
+        },
+        {
+          "name": "Blue Archive cosplay",
+          "desc": "Blue Archive Random Cosplay Images",
+          "path": "/random/cosplay-ba",
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "name": "Search Tools",
+      "icon": "fas fa-search",
+      "items": [
+        {
+          "name": "YouTube Search",
+          "desc": "Video search",
+          "path": "/search/youtube?q=",
+          "status": "ready"
+        },
+        {
+          "name": "Pinterest Search",
+          "desc": "Pin foto search",
+          "path": "/search/pinterest?query=",
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "name": "Download Tools",
+      "icon": "fas fa-download",
+      "items": [
+        {
+          "name": "Tiktok",
+          "desc": "Download Video Tiktok",
+          "path": "/download/tiktok?url=",
+          "status": "ready",
+          "params": {
+            "url": "Masukan URL nya"
+          }
+        },
+        {
+          "name": "Instagram",
+          "desc": "Download Reel/Video IG",
+          "path": "/download/instagram?url=",
+          "status": "ready",
+          "params": {
+            "url": "Masukan URL nya"
+          }
+        },
+        {
+          "name": "YouTube Audio Downloader",
+          "desc": "Download Audio Dari YouTube",
+          "path": "/download/ytmp3?url=",
+          "status": "ready",
+          "params": {
+            "url": "Masukan URL nya"
+          }
+        },
+        {
+          "name": "YouTube Video Downloader",
+          "desc": "Download Video Dari YouTube",
+          "path": "/download/ytmp4?url=",
+          "status": "ready",
+          "params": {
+            "url": "Masukan URL nya"
+          }
+        },
+        {
+          "name": "YouTube Downloader V2",
+          "desc": "Download Video Dari YouTube Menggunakan yt-dlp, lebih premium!!",
+          "path": "/download/yt-dlp?url=&apikey=",
+          "status": "error",
+          "innerDesc": "Buy apikey >> wa.me/6288246552068",
+          "params": {
+            "url": "Masukan URL nya"
+          }
+        },
+        {
+          "name": "YouTube Downloader V1",
+          "desc": "Download Musik Dari YouTube menggunakan ytdl-core!!",
+          "path": "/download/ytplay?url=",
+          "status": "error",
+          "params": {
+            "url": "Masukan URL nya"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Stalk",
+      "icon": "fas fa-user-secret",
+      "items": [
+        {
+          "name": "Mobile Legends",
+          "desc": "Stalk akun Mobile Legends",
+          "path": "/stalk/mlbb?userId=&zoneId=&apikey=",
+          "status": "ready",
+          "params": {
+            "userId": "User ID Mobile Legends",
+            "zoneId": "Zone ID Mobile Legends",
+            "apikey": "Your API key"
+          }
+        },
+        {
+          "name": "Mobile Legends First TopUp",
+          "desc": "Cek First TopUp Moble Legends",
+          "path": "/stalk/mlbb2?userId=&zoneId=&apikey=",
+          "status": "ready",
+          "params": {
+            "userId": "User ID Mobile Legends",
+            "zoneId": "Zone ID Mobile Legends",
+            "apikey": "Your API key"
+          }
+        },
+        {
+          "name": "Free Fire",
+          "desc": "Stalk akun Free Fire",
+          "path": "/stalk/ff?id=&apikey=",
+          "status": "ready",
+          "params": {
+            "id": "Player ID Free Fire"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tools",
+      "icon": "fas fa-tools",
+      "items": [
+        {
+          "name": "Create Panel",
+          "desc": "Buat panel dengan versi node.js 1 - 24",
+          "path": "/tools/cpanel?capikey=&aapikey=&ram=&disk=&name=&nestID=&egg=&location=&cpu=&domain=&node=",
+          "status": "ready",
+          "params": {
+            "capikey": " apikey ptlc",
+            "aapikey": "apikey ptla",
+            "ram": "jumlah ram",
+            "disk": "jumlah disk",
+            "name": "nama user + server",
+            "nestID": "nest id",
+            "egg": "egg server",
+            "location": "location egg",
+            "domain": "domain panel mu",
+            "cpu": "penggunaan maksimal cpu server",
+            "node": "versi node.js"
+          }
+        },
+        {
+          "name": "YouTube Summary",
+          "desc": "Analisis video dari YouTube menggunakan AI",
+          "path": "/tools/yt-summary?url=",
+          "status": "ready",
+          "params": {
+            "url": "Masukan URL nya"
+          }
+        },
+        {
+          "name": "Quote chat Generator",
+          "desc": "Buat quote dengan teks, warna dan foto profil",
+          "path": "/tools/qc?text=&profile=&color=&name=",
+          "params": {
+    "text": "Teks untuk dijadikan quote (max 100)",
+            "profile": "URL gambar profil pengguna",
+            "color": "Warna latar (opsional)",
+            "name": "Nama pengirim"
+          }
+        },
+        {
+          "name": "Removebg",
+          "desc": "Hapus background gambar",
+          "path": "/tools/removebg?apikey=&imageUrl=",
+          "status": "ready",
+          "params": {
+            "imageUrl": "URL gambar yang ingin dihapus background-nya"
+          }
+        },
+        {
+          "name": "Brat",
+          "desc": "Ubah Teks Menjadi Stiker",
+          "path": "/tools/brat?text=&apikey=",
+          "status": "ready",
+          "params": {
+            "text": "Teks yang ingin diubah ke gaya Bratz"
+          }
+        },
+        {
+          "name": "Brat Anime",
+          "desc": "Ubah Teks Menjadi Stiker dengan karakter anime",
+          "path": "/tools/bratnime?text=&apikey=",
+          "status": "ready",
+          "params": {
+            "text": "Teks yang ingin diubah ke gaya Brat karakter anime"
+            }
+          },
+          {
+          "name": "Stiker Meme",
+          "desc": "Tambahkan text di foto bagian atas dan bawah",
+          "path": "/tools/smeme?img=&atas=&bawah=",
+          "status": "ready",
+          "params": {
+            "img": "link foto"
+          }
+        },
+        {
+          "name": "WelcomeLeave Image",
+          "desc": "Kartu Welcome atau Leave message",
+          "path": "/tools/WelcomeLeave?desc=&title=&profile=&background=",
+          "status": "ready",
+          "params": {
+            "profile": "link foto profile"
+          }
+        }
+      ]
+    }
+  ]
+}
